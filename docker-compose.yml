@@ -133,3 +133,18 @@ services:
         condition: service_started
     volumes:
       - ./consensus:/consensus
+
+  dora-explorer:
+    image: "pk910/dora-the-explorer:latest"
+    container_name: "dora-explorer"
+    command: -config=/config/config.yaml
+    volumes:
+      - ./dora:/config
+      - ./consensus:/consensus
+      # - ./validator-ranges:/validator-ranges
+    ports:
+      - "9777:8080"
+    depends_on:
+      beacon-chain:
+        condition: service_started
+    restart: unless-stopped
