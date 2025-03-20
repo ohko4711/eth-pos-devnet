@@ -36,8 +36,7 @@
 				"baseFeeUpdateFraction": 5007716
 			}
 		},
-		"pragueTime": 1741004076,
-		"osakaTime": 2124610476
+		"pragueTime": 1741004076
 	},
 	"nonce": "0x0",
 	"timestamp": "0x64fb7de6",
